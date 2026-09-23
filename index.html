@@ -49,7 +49,7 @@
     <img id="lightboxImage" alt="">
     <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="下一张">›</button>
   </div>
-  <div class="lightbox-caption"><strong id="lightboxTitle"></strong><small>左右滑动切换 · 双击放大</small></div>
+  <div class="lightbox-caption"><strong id="lightboxTitle"></strong><small>单击退出 · 左右滑动切换 · 双击放大</small></div>
 </div>
 <script>
 /* ===== 工具函数 ===== */
@@ -407,7 +407,7 @@ let saved={};try{saved=JSON.parse(localStorage.getItem('osaka-guide-checks')||'{
 
 /* ===== 渲染 ===== */
 let curDay='day1', curTab='route', curStage='before';
-let lightboxItems=[], lightboxIndex=0, touchStartX=null;
+let lightboxItems=[], lightboxIndex=0, touchStartX=null, touchMoved=false, imageClickTimer=null;
 const lightbox=document.getElementById('lightbox');
 const lightboxImage=document.getElementById('lightboxImage');
 function showLightbox(){
@@ -426,9 +426,11 @@ document.getElementById('lightboxClose').onclick=closeLightbox;
 document.getElementById('lightboxPrev').onclick=e=>{e.stopPropagation();moveLightbox(-1)};
 document.getElementById('lightboxNext').onclick=e=>{e.stopPropagation();moveLightbox(1)};
 lightbox.onclick=e=>{if(e.target===lightbox||e.target===document.getElementById('lightboxStage'))closeLightbox()};
-lightboxImage.ondblclick=()=>lightboxImage.classList.toggle('zoomed');
-document.getElementById('lightboxStage').ontouchstart=e=>{touchStartX=e.touches[0]?.clientX??null};
-document.getElementById('lightboxStage').ontouchend=e=>{if(touchStartX===null)return;const delta=(e.changedTouches[0]?.clientX??touchStartX)-touchStartX;if(Math.abs(delta)>45)moveLightbox(delta>0?-1:1);touchStartX=null};
+lightboxImage.onclick=e=>{e.stopPropagation();if(touchMoved){touchMoved=false;return}clearTimeout(imageClickTimer);imageClickTimer=setTimeout(closeLightbox,250)};
+lightboxImage.ondblclick=e=>{e.stopPropagation();clearTimeout(imageClickTimer);lightboxImage.classList.toggle('zoomed')};
+document.getElementById('lightboxStage').ontouchstart=e=>{touchStartX=e.touches[0]?.clientX??null;touchMoved=false};
+document.getElementById('lightboxStage').ontouchmove=e=>{if(touchStartX===null)return;const delta=(e.touches[0]?.clientX??touchStartX)-touchStartX;if(Math.abs(delta)>12)touchMoved=true};
+document.getElementById('lightboxStage').ontouchend=e=>{if(touchStartX===null)return;const delta=(e.changedTouches[0]?.clientX??touchStartX)-touchStartX;if(Math.abs(delta)>45){touchMoved=true;moveLightbox(delta>0?-1:1)}touchStartX=null};
 document.addEventListener('keydown',e=>{if(!lightbox.classList.contains('open'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')moveLightbox(-1);if(e.key==='ArrowRight')moveLightbox(1)});
 
 function renderRoute(d){
