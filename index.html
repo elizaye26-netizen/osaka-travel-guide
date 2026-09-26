@@ -72,7 +72,7 @@ const day1={
   {time:'16:45',title:'步行前往中崎町',details:['从 JR 大阪站出发','定位：大阪府大阪市北区中崎西1丁目1-18'],map:'大阪府大阪市北区中崎西1丁目1-18',img:['nakazakicho.jpg']},
   {time:'17:00',title:'中崎町自由逛',details:['预留 1 小时','拍复古街巷，逛古着屋和手作小店'],map:'Nakazakicho Osaka',xhs:'https://www.xiaohongshu.com/explore/6a8d8f9b000000001e016eb6',img:['nakazakicho-2.jpg']},
   {time:'18:00',title:'阪急梅田本店',details:['途中若经过合适的 HEP FIVE 红色摩天轮机位就顺路拍照；没有合适机位则不专门前往','定位：阪急うめだ本店；顺路机位参考：HEP FIVE'],map:'阪急うめだ本店',img:['hep-five.jpg']},
-  {time:'18:15',title:'梅田购物',details:['阪急梅田本店（20:00 关门，B1 退税 19:30 截止）：1F 香奈儿先冲、8F 巴塔哥尼亚，B1 一起退税','↓ 2 楼连廊 Grand Front 南馆（21:00 关门，店内直接免税）：5F 迪桑特、5F Montbell 美山、4F 始祖鸟可选','↓ 地下通道 LUCUA 2F（21:00 关门）：Lululemon 记价，后续和其他门店比价','↓ 步行约 8 分钟 Alpen OSAKA（21:00 关门，4F 退税 20:50 截止）：1F On 昂跑＋HOKA 直接拿码'],map:'阪急うめだ本店',xhs:'https://www.xiaohongshu.com/explore/6a708439000000003300f42f',img:['umeda-coupon.jpg']},
+  {time:'18:15',title:'梅田购物＋配镜（第一次尝试）',details:['阪急梅田本店（20:00 关门，B1 退税 19:30 截止）：1F 香奈儿先冲、8F 巴塔哥尼亚，B1 一起退税','↓ 2 楼连廊 Grand Front 南馆（21:00 关门，店内直接免税）：5F 迪桑特、5F Montbell 美山、4F 始祖鸟可选','4F JINS 配镜比较：与始祖鸟同层，先看小至中型全框，确认右眼-6.50D、左眼-5.25D的1.74薄型非球面镜片库存、镜片加价、整副总价和取镜时间；带旧眼镜及2024年JINS验光单，到店仍需重新验光','↓ 地下通道 LUCUA 2F（21:00 关门）：Lululemon 记价，后续和其他门店比价','8F OWNDAYS 配镜（第一次尝试）：带旧眼镜与2024年JINS验光单，先问右眼-6.50D、左眼-5.25D的1.74薄型非球面镜片是否有现货；再重新验光、试戴小至中型全框','下单条件：先比较Grand Front南馆4F JINS与LUCUA 8F OWNDAYS的镜框、1.74镜片总价和取镜时间；优先选择明确确认当日可取且不影响阪急退税和后续必逛店铺的一家。若都需隔日或数日取镜，保留款式与报价，Day 3在难波继续比较','↓ 步行约 8 分钟 Alpen OSAKA（21:00 关门，4F 退税 20:50 截止）：1F On 昂跑＋HOKA 直接拿码'],map:'阪急うめだ本店',xhs:'https://www.xiaohongshu.com/explore/6a708439000000003300f42f',img:['umeda-coupon.jpg']},
   {time:'21:00',title:'吟味屋 バルチカ03店晚餐',details:['前往イノゲート大阪 5F；已选和牛夜景餐厅','优先预约「煌」中档套餐，并备注希望夜景窗边座位'],map:'吟味屋 バルチカ03店'},
   {time:'22:25',title:'晚餐结束・打车返回酒店',details:['从イノゲート大阪直接打车回中之岛酒店','上车：吟味屋 バルチカ03店；下车：リーガロイヤルホテル大阪'],map:'吟味屋 バルチカ03店'},
   {time:'22:45',title:'预计回到酒店',details:['晚餐为套餐制，不赶酒店末班接驳车','预计 22:40—22:55 回到酒店，以实际结账与路况为准'],map:'リーガロイヤルホテル大阪'}
@@ -96,7 +96,9 @@ const day1={
   ['巴塔哥尼亚','阪急梅田本店 8F','与香奈儿一起退税'],
   ['迪桑特','Grand Front 南馆 5F','重点看日本制 / MOVE SPORT'],
   ['Montbell 美山','Grand Front 南馆 5F','店内直接免税'],
+  ['JINS 配镜比较','Grand Front 南馆 4F','确认右眼-6.50D/左眼-5.25D的1.74薄型非球面镜片库存、总价与取镜时间；带旧眼镜及2024年JINS验光单'],
   ['Lululemon','LUCUA 2F','记价，后续门店比价'],
+  ['OWNDAYS 配镜','LUCUA 8F','问1.74镜片现货、重新验光与总价；试戴小至中型全框'],
   ['On 昂跑 + HOKA','Alpen OSAKA 1F','鞋款已确认，直接拿码']
  ],
  couponImg:'umeda-coupon.jpg'
@@ -219,11 +221,11 @@ const day3={
   {time:'12:00',title:'步行前往难波八阪神社',details:['从新世界沿南海本线方向步行约 12—15 分钟','定位：難波八阪神社；地址：大阪市浪速区元町3-9-17'],map:'難波八阪神社'},
   {time:'12:20',title:'难波八阪神社',details:['看巨大狮子殿（獅子頭）外观与仰拍，狮子巨口吞厄运祈福','小书包御守（红／黑）每人每色限 1 个，另有扇子造型御守；旺季可能排队约 1 小时','返程可走 四ツ橋線 难波站 32 号出口步行约 10 分','定位：難波八阪神社 獅子殿'],map:'難波八阪神社 獅子殿',img:['nanbayasaka-1.jpg','nanbayasaka-2.jpg','nanbayasaka-3.jpg','nanbayasaka-4.jpg']},
   {time:'13:05',title:'步行前往难波PARKS',details:['从八阪神社步行约 10 分钟到难波PARKS','定位：なんばパークス；地址：大阪市浪速区難波中2-10-70'],map:'なんばパークス'},
-  {time:'13:15',title:'难波PARKS 购物＋午餐',details:['店铺 11:00–21:00、餐厅 11:00–23:00；走累在 6–8F 美食层随时吃','2F 川久保玲／西太后／BEAMS HOUSE／Venchi 冰淇淋；3F Alpen Outdoors／LACOSTE／HARBS 水果千层','5F Francfranc／LOFT／Lupicia 茶叶；9F PARKS GARDEN 草坪广场看全景','退税在馆内服务台办理，购物当天完成、带护照','定位：なんばパークス インフォメーション'],map:'なんばパークス インフォメーション',xhs:'https://www.xiaohongshu.com/explore/68e0e1410000000004000d15'},
+  {time:'13:15',title:'难波PARKS 漫游＋午餐＋配镜',details:['店铺 11:00–21:00、餐厅 11:00–23:00；走累在 6–8F 美食层随时吃','2F 川久保玲／西太后／BEAMS HOUSE／Venchi 冰淇淋；3F Alpen Outdoors／LACOSTE／HARBS 水果千层','5F Francfranc／LOFT／Lupicia 茶叶；9F PARKS GARDEN 草坪广场看全景','退税在馆内服务台办理，购物当天完成、带护照','配镜正式比较／补救：若Day 1尚未下单，先到难波CITY南馆1F的OWNDAYS确认1.74镜片现货、验光及总价，再到难波PARKS T-terrace 2F的JINS比较镜框与1.74镜片总价','若Day 1已下单：本时段只按取镜通知回梅田门店取镜，不再重复验光；若Day 1未下单，优先在能明确承诺本次旅行内取镜的门店购买','定位：なんばパークス インフォメーション'],map:'なんばパークス インフォメーション',xhs:'https://www.xiaohongshu.com/explore/68e0e1410000000004000d15'},
   {time:'15:15',title:'步行北上前往橘子街',details:['沿御堂筋方向步行约 15–20 分钟，经美国村（アメリカ村）','定位：オレンジストリート（Orange Street）／アメリカ村'],map:'オレンジストリート 大阪'},
   {time:'15:35',title:'Orange Street 橘子街',details:['街边店为主，多数 11:00–19:00、12 点后全开；护照满 5,000 日元免税，Supreme 无退税','街头潮牌：Supreme、Carhartt WIP、HOODS（NEIGHBORHOOD／WTAPS）；户外集合 SORA（北面紫标／Patagonia／始祖鸟／HOKA）','古着寻宝：JAM、Kindal、2nd Street；球鞋 BILLY\'S ENT','定位：大阪メトロ四ツ橋線 四ツ橋駅 5番出口'],map:'オレンジストリート 大阪',img:['orange-1.jpg','orange-2.jpg','orange-3.jpg']},
   {time:'16:50',title:'步行前往心斋桥PARCO',details:['从橘子街向北步行约 10 分钟','定位：心斎橋PARCO；地址：大阪市中央区心斎橋筋1-8-3'],map:'心斎橋PARCO'},
-  {time:'17:00',title:'心斋桥PARCO 购物',details:['1F 三宅一生＋爱马仕／Burberry／Maison Margiela／Sacai','2F 北面／鬼冢虎／Stone Island；3F CA4LA／coach','定位：心斎橋PARCO 1F 三宅一生'],map:'心斎橋PARCO',img:['shinsaibashi-parco-1.jpg','shinsaibashi-parco-2.jpg','shinsaibashi-parco-3.jpg']},
+  {time:'17:00',title:'心斋桥PARCO 漫游＋配镜备选',details:['1F 三宅一生＋爱马仕／Burberry／Maison Margiela／Sacai','2F 北面／鬼冢虎／Stone Island；3F CA4LA／coach','5F Zoff 配镜备选：仅在Day 1和难波仍未选定时比较；重点比较1.74与1.76镜片、边缘厚度和总价，先确认能在离境前取镜再下单','定位：心斎橋PARCO 1F 三宅一生'],map:'心斎橋PARCO',img:['shinsaibashi-parco-1.jpg','shinsaibashi-parco-2.jpg','shinsaibashi-parco-3.jpg']},
   {time:'18:55',title:'大丸心斋桥店',details:['全馆 10:00–20:00、本馆 9F 退税柜台 10:00–20:00、南馆 4F 免税／化妆品 12:00–20:00','1F 国际化妆品、4F 西太后／lululemon／Aesop；南馆 6F 整层 Montbell','务必 20:00 关门前完成退税','定位：大丸心斎橋店 本館；退税 本館9F／南館4F'],map:'大丸心斎橋店'},
   {time:'20:00',title:'道顿堀 夜景',details:['在戎桥（えびす橋）上拍格力高跑步人霓虹招牌、两岸霓虹与道顿堀川夜景','人流多，边走边拍为主，不硬等空镜','定位：道頓堀 戎橋（えびすばし）；グリコネオンサイン'],map:'道頓堀 戎橋',img:['dotonbori-1.jpg','dotonbori-2.jpg','dotonbori-3.jpg','dotonbori-4.jpg']},
   {time:'20:40',title:'法善寺横丁',details:['道顿堀旁的昭和石板小巷，提灯与老町屋氛围，夜间最出片','顺路看法善寺水挂不动尊（向雕像泼水祈福）；窄巷内保持安静、避让食客','定位：法善寺横丁；地址：大阪市中央区難波1-2-15'],map:'法善寺横丁',img:['hozenji.jpg']},
@@ -278,9 +280,9 @@ const day3={
  ],
  shopType:'groups',
  shopGroups:[
-  {title:'难波PARKS',items:['2F 川久保玲／西太后／BEAMS HOUSE／Venchi 冰淇淋','3F Alpen Outdoors／LACOSTE／HARBS 水果千层','5F Francfranc／LOFT／Lupicia 茶叶','9F PARKS GARDEN 草坪广场看全景','退税在馆内服务台办理，购物当天完成、带护照']},
+  {title:'难波PARKS',items:['2F 川久保玲／西太后／BEAMS HOUSE／Venchi 冰淇淋','3F Alpen Outdoors／LACOSTE／HARBS 水果千层','5F Francfranc／LOFT／Lupicia 茶叶','9F PARKS GARDEN 草坪广场看全景','退税在馆内服务台办理，购物当天完成、带护照','配镜：难波CITY南馆1F OWNDAYS 确认1.74镜片现货、验光及总价；难波PARKS T-terrace 2F JINS 比较镜框与1.74镜片总价']},
   {title:'Orange Street 橘子街',items:['街头潮牌：Supreme、Carhartt WIP、HOODS（NEIGHBORHOOD／WTAPS）','户外集合 SORA（北面紫标／Patagonia／始祖鸟／HOKA）','古着寻宝：JAM、Kindal、2nd Street','球鞋 BILLY\'S ENT','护照满 5,000 日元免税，Supreme 无退税']},
-  {title:'心斋桥PARCO',items:['1F 三宅一生＋爱马仕／Burberry／Maison Margiela／Sacai','2F 北面／鬼冢虎／Stone Island','3F CA4LA／coach']},
+  {title:'心斋桥PARCO',items:['1F 三宅一生＋爱马仕／Burberry／Maison Margiela／Sacai','2F 北面／鬼冢虎／Stone Island','3F CA4LA／coach','5F Zoff 配镜备选：仅在前两处未选定时比较，确认离境前可取镜再下单']},
   {title:'大丸心斋桥店',items:['1F 国际化妆品','4F 西太后／lululemon／Aesop','南馆 6F 整层 Montbell','本馆 9F 退税柜台／南馆 4F 免税·化妆品；务必 20:00 关门前完成退税']}
  ]
 };
@@ -394,7 +396,8 @@ const groups={before:[
   ['证件与入境',['护照（含签证）、身份证','出发前 10 天注册 Visit Japan Web，生成并截图保存 QR 码']],
   ['支付与交通',['确认现金是否已兑换（5 万日元）','确认农行／招行跨境消费信息','携带 Mastercard 信用卡、招商金葵花储蓄卡取现；其他卡不用带','Suica 充值 5,000 日元（约 213 元）','下载 Klook 和 USJ 官方 App；购买 HARUKA 优惠票及 USJ 普通一日票']],
   ['网络与应用',['购买 7 天 15GB KDDI 实体流量卡','国内手机号开通国际漫游与流量包','下载 Google Maps 大阪、京都离线地图','保存点餐翻译／菜单翻译工具']],
-  ['随身物品',['便携垃圾袋、洗脸巾、口罩、折叠伞','出发前查看天气','零钱包、数据线、充电宝、相机']]
+  ['随身物品',['便携垃圾袋、洗脸巾、口罩、折叠伞','出发前查看天气','零钱包、数据线、充电宝、相机']],
+  ['购物优惠券',['梅田商圈优惠券截图','临空奥莱外国游客优惠券二维码','退税流程备忘截图']]
 ],during:[
   ['购物与退税',['购物当天携带护照，并在对应商场完成退税','退税商品离境前不拆封，或按商家要求保管','集中保存购物小票、退税单与刷卡凭证']],
   ['每天结束前',['备份当天照片并标记打卡地点','确认次日天气、交通和预约凭证']]
